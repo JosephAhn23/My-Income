@@ -1,8 +1,23 @@
 # Signal Tradability Framework
 
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-production--ready-brightgreen.svg)](https://github.com/JosephAhn23/Tradability)
+
 > **"Real quant research isn't about discovering alpha. It's about knowing exactly why it won't survive."**
 
 A rigorous quantitative research framework that evaluates whether trading signals are **economically tradable** (profitable after real-world costs), not just statistically significant.
+
+## 🎯 What Problem Does This Solve?
+
+Most quant research focuses on finding signals with good **statistical properties** (high Sharpe, positive returns). But in reality, many signals that look great on paper are **untradable** because:
+
+- Transaction costs eat all the profits
+- Market impact prevents scaling to meaningful capital
+- Signals only work in specific market regimes
+- Hidden costs (slippage, spreads) kill profitability
+
+This framework **kills bad ideas before they kill capital**.
 
 ## 🎯 Core Purpose
 
@@ -68,6 +83,11 @@ Rigorous adversarial tests that make binary DEPLOY/REJECT decisions:
 ### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/JosephAhn23/Tradability.git
+cd Tradability
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
@@ -93,6 +113,25 @@ python comprehensive_validation.py
 python create_attestation.py
 ```
 
+### Example: Evaluate a Signal
+
+```python
+from execute_signals import execute_signal_verdict
+from datetime import datetime
+
+# Evaluate momentum signal
+verdict = execute_signal_verdict(
+    signal_name='momentum_12_1',
+    ticker='SPY',
+    start_date=datetime(2000, 1, 1),
+    end_date=datetime(2020, 12, 31)
+)
+
+print(f"Decision: {verdict.decision}")
+print(f"Max AUM: ${verdict.max_aum/1e6:.0f}M")
+print(f"Cause: {verdict.cause_of_death}")
+```
+
 ## 📊 Example Output
 
 ### War Table (Binary Decisions)
@@ -102,6 +141,17 @@ python create_attestation.py
 | momentum_12_1 | ❌ REJECT | $6M | Net Sharpe 0.32 < 0.5 | 0.32 | 2.1x |
 | volatility_breakout | ❌ REJECT | $0M | Capacity $0M < $25M | -0.82 | 4.5x |
 | ma_crossover | ❌ REJECT | $14M | Break-even 0.78% < 1.0% | 0.45 | 3.2x |
+
+### Validation Results
+
+**Out-of-Sample (10-Year: 2015-2024):**
+- ✅ Accuracy: **100%** (4/4 signals correctly rejected)
+- ✅ Test Sharpe with CI: -0.50 [-0.54, -0.45]
+- ✅ 2,200+ observations per signal
+
+**Regime Analysis:**
+- ⚠️ momentum_12_1: Sign flip detected (Sharpe -0.77 to +1.10)
+- ⚠️ Regime fragile: TRUE (works only in Bear/Low Vol)
 
 ### Validation Results
 
@@ -166,15 +216,34 @@ Signals are **REJECTED** if:
 3. **Break-even costs** are often below realistic transaction costs
 4. **Capacity constraints** limit scalability to meaningful capital
 
+### Performance Metrics
+
+| Metric | Value |
+|--------|-------|
+| Out-of-Sample Accuracy | 100% |
+| Test Period | 10 years (2015-2024) |
+| Signals Tested | 4 |
+| Signals Rejected | 4 |
+| Regime Fragile Signals | 1 (momentum_12_1) |
+
 ## 🛠️ Requirements
 
-- Python 3.8+
+- **Python 3.8+**
 - pandas
 - numpy
 - scipy
 - yfinance (for data)
 
 See `requirements.txt` for full list.
+
+### Dependencies
+
+```bash
+pandas>=1.3.0
+numpy>=1.21.0
+scipy>=1.7.0
+yfinance>=0.1.70
+```
 
 ## 📝 Philosophy
 
@@ -217,15 +286,50 @@ This is a research framework. Contributions should focus on:
 - Extending regime analysis
 - Production trading validation
 
+### How to Contribute
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📋 Roadmap
+
+- [ ] Production trading validation
+- [ ] Parameter calibration to current markets
+- [ ] Regime-aware deployment logic
+- [ ] Additional asset classes (bonds, commodities, FX)
+- [ ] Machine learning signal support
+
 ## 📄 License
 
-See LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👤 Author
+
+**Joseph Ahn**
+
+- GitHub: [@JosephAhn23](https://github.com/JosephAhn23)
+- Repository: [Tradability](https://github.com/JosephAhn23/Tradability)
 
 ## 🙏 Acknowledgments
 
 Built with the philosophy: **"Real quant research isn't about discovering alpha. It's about knowing exactly why it won't survive."**
 
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=JosephAhn23/Tradability&type=Date)](https://star-history.com/#JosephAhn23/Tradability&Date)
+
 ---
 
 **Status**: Production-ready for signal rejection decisions. Framework is rigorous, validated, and honest about limitations.
+
+## 📞 Contact
+
+For questions, issues, or contributions, please open an issue on GitHub.
+
+---
+
+**Built with the philosophy**: *"Real quant research isn't about discovering alpha. It's about knowing exactly why it won't survive."*
 
