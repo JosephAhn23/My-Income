@@ -1,0 +1,38 @@
+{
+  "box-1": {
+    "x": -284,
+    "y": 6,
+    "name": "Grade 6 Math Kangaroo"
+  },
+  "box-2": {
+    "x": 344,
+    "y": 25,
+    "name": "Gauss Contest"
+  },
+  "box-3": {
+    "x": 950,
+    "y": 18,
+    "name": "Most Common Canadian Schools"
+  },
+  "box-4": {
+    "x": 130,
+    "y": 1069,
+    "name": "Meritus Academy"
+  },
+  "box-5": {
+    "x": 1392,
+    "y": 1296,
+    "name": "Top-20 CS Universities"
+  },
+  "box-6": {
+    "x": -443,
+    "y": 1238,
+    "name": "SV SWE Chance (uottawa cs)"
+  },
+  "box-7": {
+    "x": 830,
+    "y": 1288,
+    "name": "Top 30 High Schools by USACO Finalist Occurrence"
+  }
+}
+

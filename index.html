@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Lifetime (chronological order)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Income Lifetime (chronological order)</h1>
+        
+        <div class="pipeline">
+            <!-- SVG Connectors Overlay - will be drawn by JavaScript -->
+            <svg class="connectors-svg">
+                <defs>
+                    <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.9" />
+                        <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#f093fb;stop-opacity:0.9" />
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+            </svg>
+            
+
+            <!-- Top Row -->
+            <div class="pipeline-row top-row">
+                <!-- First Box: Grade 6 Math Kangaroo -->
+                <div class="pipeline-box first-box" data-box="1">
+                    <div class="box-header">
+                        <h2>🏆 Grade 6 Math Kangaroo — Combined 2023–2025 School Rankings</h2>
+                        <p class="sv-percentage">→ USA SWE: 0.5%</p>
+                        <div class="coordinates-display">(-284, 6)</div>
+                    </div>
+                    <div class="box-content">
+                        <div class="gta-areas">
+                            <div class="gta-label">📍 Most Common GTA Areas (2018–2025)</div>
+                            <div class="gta-list">
+                                <span>Markham</span>
+                                <span>Richmond Hill</span>
+                                <span>North York</span>
+                                <span>Scarborough</span>
+                                <span>Central Toronto</span>
+                            </div>
+                        </div>
+                        <ol class="school-list">
+                            <li>
+                                <span class="school-name">Renert School</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Mount Pleasant School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Silver Stream Public School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Donald Cousens Public School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Zion Heights Middle School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Wellington Public School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Grandview Heights School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Pilgrim Wood Public School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Dr. Margaret-Ann Armour School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Knoxdale Public School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">École St-Fabien</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Ashton Meadows Public School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Westbrook Elementary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Earl Buxton School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">W. Erskine Johnston Public School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Crescent School</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Webber Academy</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Laureate's Academy for Gifted Students</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Toronto French School (West Campus)</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Gentilly Primary School</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Second Box: Gauss Contest -->
+                <div class="pipeline-box second-box" data-box="2">
+                    <div class="box-header">
+                        <h2>🟣 Gauss Contest — Grade 8</h2>
+                        <p class="box-subtitle">#1 feeder into CCC later — Top 20 Canadian Schools (Combined 2023 + 2024)</p>
+                        <p class="sv-percentage">→ USA SWE: 1%</p>
+                        <div class="coordinates-display">(344, 25)</div>
+                    </div>
+                    <div class="box-content">
+                        <ol class="school-list">
+                            <li>
+                                <span class="school-name">Laureates Academy for Gifted Students</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Zion Heights Junior High School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Crosby Heights Public School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">St. George's School</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">W.H. Morden School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Mulgrave School</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">St. Andrews Junior High School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Kwayhquitlum Middle School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Discovery Academy</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Earl of March Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">University of Toronto Schools</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">West Point Grey Academy</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Semiahmoo Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Sir Winston Churchill Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">St. John's-Ravenscourt School</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Michael Cranny Elementary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Silver Stream Public School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">College Jean-de-Brébeuf</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Vernon Barford School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Beynon Fields Public School</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Third Box: T20 Highschools -->
+                <div class="pipeline-box third-box" data-box="3">
+                    <div class="box-header">
+                        <h2>🟣 Most Common Canadian Schools — Senior CCC 2024</h2>
+                        <p class="sv-percentage">→ USA SWE: 6%</p>
+                        <div class="coordinates-display">(950, 18)</div>
+                    </div>
+                    <div class="box-content">
+                        <ol class="school-list">
+                            <li>
+                                <span class="school-name">William Lyon Mackenzie Collegiate Institute</span>
+                            </li>
+                            <li>
+                                <span class="school-name">University of Toronto Schools</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Markville Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">St. Robert Catholic High School</span>
+                                <span class="school-type catholic">Catholic</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Merivale High School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">The Woodlands Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Burnaby North Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Bayview Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Iroquois Ridge High School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Marc Garneau Collegiate Institute</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Upper Canada College</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Colonel By Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Glenforest Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Victoria Park Collegiate Institute</span>
+                            </li>
+                            <li>
+                                <span class="school-name">West Vancouver Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Earl Haig Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Oakville Trafalgar High School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">David Thompson Secondary School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Pierre Elliott Trudeau High School</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Hillfield-Strathallan College</span>
+                                <span class="school-type private">Private</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Row: Box 4 below Box 1 -->
+            <div class="pipeline-row middle-row">
+                <!-- Fourth Box: Meritus Academy -->
+                <div class="pipeline-box fourth-box" data-box="4">
+                    <div class="box-header">
+                        <h2>🟣 Meritus Academy 2024 — University Outcomes</h2>
+                        <p class="box-subtitle">Ranked by Frequency</p>
+                        <p class="sv-percentage">→ USA SWE: 20%</p>
+                        <div class="coordinates-display">(-272, 997)</div>
+                    </div>
+                    <div class="box-content">
+                        <ol class="school-list">
+                            <li>
+                                <span class="school-name">Carnegie Mellon University</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Princeton University</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Duke University</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Harvard University</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Stanford University</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Seventh Box: USACO High Schools -->
+                <div class="pipeline-box seventh-box" data-box="7">
+                    <div class="box-header">
+                        <h2>🏆 Top 30 High Schools by USACO Finalist Occurrence (2021–2025)</h2>
+                        <p class="sv-percentage">→ USA SWE: 25%</p>
+                        <div class="coordinates-display">(280, 1008)</div>
+                    </div>
+                    <div class="box-content">
+                        <ol class="school-list">
+                            <li><span class="school-name">Lynbrook High School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">Monta Vista High School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">Basis Independent Silicon Valley</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">PRISMS</span></li>
+                            <li><span class="school-name">Irvington High School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">Henry M. Gunn High School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">Montgomery Blair High School</span></li>
+                            <li><span class="school-name">Newport High School</span></li>
+                            <li><span class="school-name">The Harker School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">Lexington High School</span></li>
+                            <li><span class="school-name">Homeschool</span></li>
+                            <li><span class="school-name">Millburn High School</span></li>
+                            <li><span class="school-name">Westview High School</span></li>
+                            <li><span class="school-name">Carlmont High School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">Amador Valley High School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">Henry M. Gunn High School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">Stoneman Douglas High School</span></li>
+                            <li><span class="school-name">Highland Park High School</span></li>
+                            <li><span class="school-name">Chantilly High School</span></li>
+                            <li><span class="school-name">Princeton Day School</span></li>
+                            <li><span class="school-name">West Windsor-Plainsboro High School South</span></li>
+                            <li><span class="school-name">Phillips Academy</span></li>
+                            <li><span class="school-name">Providence High School</span></li>
+                            <li><span class="school-name">Silver Creek High School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">American High School</span> <span class="school-type sv">SV</span></li>
+                            <li><span class="school-name">Columbus Academy</span></li>
+                            <li><span class="school-name">Watchung Hills Regional High School</span></li>
+                            <li><span class="school-name">Adlai E. Stevenson High School</span></li>
+                            <li><span class="school-name">The Rivers School</span></li>
+                            <li><span class="school-name">Bellaire High School</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Box 5 and Box 6 -->
+            <div class="pipeline-row bottom-row">
+                <!-- Sixth Box: USA SWE Independent Factors -->
+                <div class="pipeline-box sixth-box" data-box="6">
+                    <div class="box-header">
+                        <h2>🇺🇸 USA SWE (Canadian Citizen) — 4 Years Investment</h2>
+                        <p class="sv-percentage">→ USA SWE: 35%</p>
+                        <div class="coordinates-display">(2011, 1698)</div>
+                    </div>
+                    <div class="box-content">
+                        <table class="majors-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Path (3h/day × 4 yrs)</th>
+                                    <th>Chance of USA SWE job</th>
+                                    <th>Median Income (USA)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1</strong></td>
+                                    <td><strong>Free startup work</strong></td>
+                                    <td><strong>35%</strong></td>
+                                    <td><strong>$100k</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2</strong></td>
+                                    <td><strong>Cursor only</strong></td>
+                                    <td><strong>25%</strong></td>
+                                    <td><strong>$95k</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3</strong></td>
+                                    <td><strong>CS degree (alone)</strong></td>
+                                    <td><strong>20%</strong></td>
+                                    <td><strong>$90k</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4</strong></td>
+                                    <td><strong>LeetCode only</strong></td>
+                                    <td><strong>15%</strong></td>
+                                    <td><strong>$90k</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Fifth Box: Median Starting Salaries -->
+                <div class="pipeline-box fifth-box" data-box="5">
+                    <div class="box-header">
+                        <h2>🟣 Top-20 CS Universities (Median Starting Salaries)</h2>
+                        <p class="box-subtitle">Co-op = 10.0 GPA guarantee</p>
+                        <p class="sv-percentage">→ USA SWE: 35%</p>
+                        <div class="coordinates-display">(825, 975)</div>
+                    </div>
+                    <div class="box-content">
+                        <ol class="school-list">
+                            <li>
+                                <span class="school-name">Carnegie Mellon University</span>
+                                <span class="salary">$160,116</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Brown University</span>
+                                <span class="salary">$153,718</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Harvey Mudd College</span>
+                                <span class="salary">$142,581</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Stanford University</span>
+                                <span class="salary">$136,499</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Pomona College</span>
+                                <span class="salary">$128,737</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Harvard University</span>
+                                <span class="salary">$128,737</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Massachusetts Institute of Technology</span>
+                                <span class="salary">$127,993</span>
+                            </li>
+                            <li>
+                                <span class="school-name">University of California, Berkeley</span>
+                                <span class="salary">$125,388</span>
+                            </li>
+                            <li>
+                                <span class="school-name">University of Pennsylvania</span>
+                                <span class="salary">$125,015</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Cornell University</span>
+                                <span class="salary">$122,485</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Dartmouth College</span>
+                                <span class="salary">$113,015</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Rose-Hulman Institute of Technology</span>
+                                <span class="salary">$111,992</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Duke University</span>
+                                <span class="salary">$106,898</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Bowdoin College</span>
+                                <span class="salary">$104,192</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Columbia University</span>
+                                <span class="salary">$103,078</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Vanderbilt University</span>
+                                <span class="salary">$102,409</span>
+                            </li>
+                            <li>
+                                <span class="school-name">University of Illinois Urbana-Champaign</span>
+                                <span class="salary">$101,592</span>
+                            </li>
+                            <li>
+                                <span class="school-name">University of Washington Bothell</span>
+                                <span class="salary">$101,221</span>
+                            </li>
+                            <li>
+                                <span class="school-name">University of Washington Seattle</span>
+                                <span class="salary">$101,221</span>
+                            </li>
+                            <li>
+                                <span class="school-name">Washington University in St. Louis</span>
+                                <span class="salary">$99,517</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Image -->
+            <div class="world-container health-container" data-box="10">
+                <div class="world-coordinates-display">(106, 2055)</div>
+                <img src="health.png" alt="Health" class="world-image">
+            </div>
+
+            <!-- World Image -->
+            <div class="world-container" data-box="8">
+                <div class="world-coordinates-display">(1399, 914)</div>
+                <img src="world.png" alt="World" class="world-image">
+            </div>
+
+            <!-- Degree Distribution Circle -->
+            <div class="degree-circle-container" data-box="12">
+                <div class="world-coordinates-display">(1895, -3)</div>
+                <svg class="degree-circle-svg" viewBox="0 0 200 200" width="400" height="400">
+                    <defs>
+                        <filter id="circleGlow">
+                            <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <!-- Background circle (unfilled) -->
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(102, 126, 234, 0.2)" stroke-width="20"/>
+                    
+                    <!-- Engineering slice (~2%) -->
+                    <path d="M 100 100 L 100 20 A 80 80 0 0 1 107.2 20.5 Z" 
+                          fill="#667eea" 
+                          filter="url(#circleGlow)"
+                          class="engineering-slice"/>
+                    
+                    <!-- Tech slice (~2.5%) -->
+                    <path d="M 100 100 L 107.2 20.5 A 80 80 0 0 1 115.2 21.5 Z" 
+                          fill="#764ba2" 
+                          filter="url(#circleGlow)"
+                          class="tech-slice"/>
+                </svg>
+                <div class="degree-legend">
+                    <div class="legend-item">
+                        <span class="legend-color engineering"></span>
+                        <span class="legend-text">Engineering: ~2%</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color tech"></span>
+                        <span class="legend-text">Tech (CS/IT/Software): ~2-3%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hourly Pay Table Box -->
+            <div class="pipeline-box hourly-pay-box" data-box="13">
+                <div class="box-header">
+                    <h2>💰 Hourly Pay by Area</h2>
+                    <div class="coordinates-display">(0, 0)</div>
+                </div>
+                <div class="box-content">
+                    <table class="majors-table hourly-pay-table">
+                        <thead>
+                            <tr>
+                                <th>Area</th>
+                                <th>Hourly Pay (USD)</th>
+                                <th>Hourly Pay (CAD)</th>
+                                <th>6-Month Earnings (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Los Angeles (LA)</strong></td>
+                                <td>$20.25</td>
+                                <td><strong>$27.34</strong></td>
+                                <td>$21,060</td>
+                            </tr>
+                            <tr>
+                                <td><strong>San Francisco / Silicon Valley (SF/SV)</strong></td>
+                                <td>$20.00</td>
+                                <td><strong>$27.00</strong></td>
+                                <td>$20,800</td>
+                            </tr>
+                            <tr>
+                                <td><strong>New York City</strong></td>
+                                <td>$17.00</td>
+                                <td><strong>$22.95</strong></td>
+                                <td>$17,680</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
