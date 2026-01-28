@@ -666,10 +666,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Clear localStorage for all boxes to force new defaults
-    for (let i = 1; i <= 11; i++) {
+    for (let i = 1; i <= 13; i++) {
         localStorage.removeItem(`box-${i}-position`);
     }
-    console.log('LocalStorage cleared - using new default positions');
+    console.log('LocalStorage cleared - using new default positions (including Nuclear Family / Country)');
     
     // Load positions (use saved if available, otherwise defaults)
     boxes.forEach((box) => {
